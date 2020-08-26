@@ -15,4 +15,12 @@ volumes: ['./:/usr/src/app']
 
 # To re-build
 docker-compose build
+
+# To push to dockerhub
+docker login
+
+docker tag {image-name} {docker-hub-username}/{default-repo-folder-name}:{image-name}
+
+docker push {docker-hub-username}/{default-repo-folder-name}:{image-name}
+
 ```
